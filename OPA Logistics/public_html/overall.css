@@ -15,15 +15,17 @@ body {
 }
 h1 {
     color: darkblue;
-    margin-left: 42%;
+    margin-left: 460px;;
     font-family: headingFont;
-    font-size: 3em;
+    font-size: 96px;
+    padding: 0em;
+    
 }
 h2 {
     color: darkblue;
     margin-left: 200px;
     font-family: headingFont;
-    font-size: 56px;
+    font-size: 96px;
 }
 
 @font-face {
@@ -37,44 +39,63 @@ h2 {
 }
 
 .loginBox {
-    background-color: lightgoldenrodyellow;
+    background-color: #ffef99;
+    border-style: groove;
+    border-color: #FFD700;
+    border-width: 5px;
     margin-left: 43%;
     margin-right: 42%;
     color: darkblue;
     padding: 20px;
-    font-family: headingFont;
-    font-size: 1.5em;
+    font-family: bodyFont;
+    font-size: 16px;
 }
 
 .menuItem {
     background-color: darkblue;
     font-family: headingFont;
-    color: white;
+    color: #ffef99;
     font-size: 2em;
     width: 170px;
     padding: 5px;
 }
 
+.menuItem:hover {
+    color: darkblue;
+    background-color: gold;
+}
+
 .menu {
-    position: absolute;
-    margin-left: 5px;
-    margin-top: 5px; 
+    float: left;
 }
 
 .body {
     position: absolute;
-    background: #F2F5A9;
-    margin-top: 0px;
+    border-style: groove;
+    border-color: #FFD700;
+    border-width: 5px;
+    background: #ffef99;
+    margin-top: 170px;
     margin-left: 225px;
     padding-left: 10px;
     padding-right: 10px;
     padding-bottom: 10px;
-    width: 900px;
-    
 }
 
 p {
     font-family: bodyFont;
     color: darkblue;
     font-size: 16px;
+}
+li {
+    font-family: bodyFont;
+    color: darkblue;
+    font-size: 16px;
+}
+
+h3 {
+    font-family: bodyFont;
+    color: darkblue;
+    font-size: 24px;
+    padding: 0em;
 }
