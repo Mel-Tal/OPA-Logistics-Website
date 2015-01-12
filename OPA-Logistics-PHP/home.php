@@ -13,19 +13,19 @@ and open the template in the editor.
     </head>
     <body>
         <div class =" menu">
-        <img src="yellowrose.png" alt="Yellow Rose" 
+            <a href="home.php"><img src="yellowrose.png" alt="Yellow Rose" 
              style="width:150px;height:150px;margin-left: 15px;
-             margin-top: 0px;">
+             margin-top: 0px;"></a>
         <br><br>
-        <a href="constitutional_revisions.html"><div class="menuItem">Constitutional Revisions</div></a> <br>
-        <a href="dissociation_voting.html"><div class="menuItem">Dissociation Voting</div></a> <br>
-        <a href="elections.html"><div class="menuItem">Elections</div></a> <br>
-        <a href="vote_in.html"><div class="menuItem">Vote In</div></a> <br>
-        <a href="other_votes.html"><div class="menuItem">Other Votes</div></a><br>
-        <a href="index.html"><div class="menuItem">Log out</div></a>
+        <a href="constitutional_revisions.php"><div class="menuItem">Constitutional Revisions</div></a> <br>
+        <a href="dissociation_voting.php"><div class="menuItem">Dissociation Voting</div></a> <br>
+        <a href="elections.php"><div class="menuItem">Elections</div></a> <br>
+        <a href="vote_in.php"><div class="menuItem">Vote In</div></a> <br>
+        <a href="other_votes.php"><div class="menuItem">Other Votes</div></a><br>
+        <a href="index.php"><div class="menuItem">Log out</div></a>
         </div>
         <h2 style="position:absolute;margin-left: 225px;margin-top: 25px;">
-            Welcome OPA Sister!
+            Welcome, OPA Sister!
         </h2>
         <div class="body" style="width: 900px;">
             <h3>Important Dates</h3>

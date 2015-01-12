@@ -24,6 +24,6 @@ and open the template in the editor.
                 <input type="submit" value="Log In">
             </form>
         </div>
-        <a href="home.html">Temp to home page</a>
+        <a href="home.php">Temp to home page</a>
     </body>
 </html>
