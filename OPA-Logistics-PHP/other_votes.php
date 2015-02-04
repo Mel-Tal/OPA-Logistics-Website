@@ -28,7 +28,8 @@ and open the template in the editor.
             Other Votes
         </h2>
         <div class="body" style="width: 900px;">
-            TODO: Put content here
+            <a href="sixty_percent.php">Sixty Percent Projects</a><br>
+            <a href="sister_of_the_month.php">Sister of the Month</a><br>
         </div>
     </body>
 </html>

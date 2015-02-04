@@ -6,9 +6,8 @@ and open the template in the editor.
 -->
 <html>
     <head>
-        <?php include('checklogin.php');?>
         <link rel="stylesheet" type="text/css" href="overall.css">
-        <title>Sister Home</title>
+        <title>Other Votes</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
@@ -25,32 +24,40 @@ and open the template in the editor.
         <a href="other_votes.php"><div class="menuItem">Other Votes</div></a><br>
         <a href="index.php"><div class="menuItem">Log out</div></a>
         </div>
-        
         <h2 style="position:absolute;margin-left: 225px;margin-top: 25px;">
-            <?php
-               
-                   if ($_SESSION['user'] == 'sister') {
-                       echo "Welcome, OPA Sister!";
-                   }
-                   else {
-                       echo "Welcome, OPA Exec Member!";
-                   }
-               
-            ?>
+            Sixty Percent Projects
         </h2>
         <div class="body" style="width: 900px;">
-            <h3>Important Dates</h3>
-            <ul>
-                <li style="padding: 1em;">Constitutional Revisions
-                    <ul>
-                        <li>Feb 17 - Discussion Day 1</li>
-                        <li>Feb 24 - Discussion Day 2</li>
-                        <li>March 3 - Voting</li>
-                    </ul>
-                </li>
-                <li style="padding: 1em;">March 24 - Exec Board Elections</li>
-                <li style="padding: 1em;">April 17 - Rose Night</li>
-            </ul>
+            
+            
+                <?php
+
+                    $host="localhost";
+                    $user="talltech_mt"; 
+                    $pass="julia1996";
+                    $db_name="talltech_ophiavotes";
+
+                    if (!$conn = new mysqli($host, $user, $pass, $db_name)){
+                        echo 'ERROR - Could Not connect to database';
+                    }
+
+                    echo "<h3>Results</h3>";
+                    $sql = "SELECT Name, Count(Name) FROM `SOMVotes`GROUP BY Name";
+                    if (!$result = $conn->query($sql)) {
+                        echo 'ERROR - '.$conn->error;
+                    } else {
+                        $result->data_seek(0);
+                        while($row = $result->fetch_assoc()){
+                            echo $row['Name'].'&nbsp;&nbsp;&nbsp;&nbsp;'.$row['Count(Name)'].'<br>';
+                        }
+                        $resultUC->close();
+                    }
+
+                ?>
+               
+            
         </div>
     </body>
 </html>
+
+
