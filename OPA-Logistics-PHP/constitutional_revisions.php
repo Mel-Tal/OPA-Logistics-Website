@@ -31,23 +31,45 @@ and open the template in the editor.
             <h3>Ammendments</h3>
             <p>
                 Which ammendment are you voting for?<br>
-                <select name="amnd">
-                    <option value="">Select</option>
-                    <option value="amnd1">Ammendment 1</option>
-                    <option value="amnd2">Ammendment 2</option>
-                    <option value="amnd3">Ammendment 3</option>
+            <form name="getRevision" method="post" action="getRevision.php">
+                    <?php
+
+                    $host="localhost";
+                    $user="talltech_mt"; 
+                    $pass="julia1996";
+                    $db_name="talltech_ophiavotes";
+
+                    if (!$conn = new mysqli($host, $user, $pass, $db_name)){
+                        echo 'ERROR - Could Not connect to database';
+                    }
+
+                    $sql = "SELECT *  FROM ConstitutionalAmmendment";
+                    if (!$result = $conn->query($sql)) {
+                        echo 'ERROR - '.$conn->error;
+                    } else  if ($result->num_rows > 0){
+                        echo '<select name="amnd">';
+                        $result->data_seek(0);
+                        echo 'result obtained<br>';
+                        while($row = $result->fetch_assoc()){
+                            //$ammendment = $row['id'];
+                            //$page = $row['pageName'];
+                            echo '<option value="' , $row['pageName'] , '">' , $row['id'] , '</option>';
+                            //echo $ammendment , "    " , $page;
+                            //echo '<br>ln<br>';
+                        }
+                        echo 'done looping through results';
+                        echo '</select>';
+                        //$resultUC->close();Why does this mess everything up?
+                    }
+                    else {
+                        echo 'No Ammendments';
+                    }
+                ?>
                 </select>
                 <br>
                 <br>
-                <br>
-                <input type="radio" name="gender" accept="" value="for">
-                Yes, I want this in the constitution
-                <br>
-                <input type="radio" name="gender" value="against">
-                No, I do not want this in the constitution
-                <br>
-                <br>
-                <input type="submit" value="Vote!">
+                <input type="submit" value="Go">
+            </form>
             </p>
         </div>
     </body>
