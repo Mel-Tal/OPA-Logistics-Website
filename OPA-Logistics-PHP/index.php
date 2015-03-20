@@ -28,13 +28,13 @@ and open the template in the editor.
             <h1 style="text-align: center"><br>Log In to Vote</h1>
         </div>
         <div class="container-fluid" style="text-align: center">
-            <div class="loginBox"
+            <div class="loginBox">
                 <form name="login" method="post" action="checklogin.php">
                     Username:<br>
                     <input name="user" type="text" id="user"><br>
                     Password: <br>
                     <input name="pass" type="password" id="pass"><br><br>
-                    <input type="submit" name="Submit" value="Login" style="padding: 5px">
+                    <input type="submit" name="Submit" value="Login">
                 </form>
             </div>
         </div>

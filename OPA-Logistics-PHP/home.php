@@ -7,50 +7,84 @@ and open the template in the editor.
 <html>
     <head>
         <?php include('checklogin.php');?>
+         <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+        <!-- Latest compiled JavaScript -->
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+        <title>OPA Votes</title>
         <link rel="stylesheet" type="text/css" href="overall.css">
-        <title>Sister Home</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="utf-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
-    <body>
-        <div class =" menu">
-            <a href="home.php"><img src="yellowrose.png" alt="Yellow Rose" 
-             style="width:150px;height:150px;margin-left: 15px;
-             margin-top: 0px;"></a>
-        <br><br>
-        <a href="constitutional_revisions.php"><div class="menuItem">Constitutional Revisions</div></a> <br>
-        <a href="dissociation_voting.php"><div class="menuItem">Dissociation Voting</div></a> <br>
-        <a href="elections.php"><div class="menuItem">Elections</div></a> <br>
-        <a href="vote_in.php"><div class="menuItem">Vote In</div></a> <br>
-        <a href="other_votes.php"><div class="menuItem">Other Votes</div></a><br>
-        <a href="index.php"><div class="menuItem">Log out</div></a>
-        </div>
-        
-        <h2 style="position:absolute;margin-left: 225px;margin-top: 25px;">
+    <body> 
+        <div class="jumbotron" style="background-color: lightskyblue">
+            <h1>
             <?php
-               
                    if ($_SESSION['user'] == 'sister') {
-                       echo "Welcome, OPA Sister!";
+                       echo "Sister Home</h1><p>Welcome to our new voting web site. "
+                       . "Here, you can vote on anything from Sister of the Month to "
+                               . "next year's exec board. Please select the category of "
+                               . "the item you wish to vote on from the options below. "
+                               . "If you do not see what you are looking for try looking "
+                               . "under other votes.</p>";
                    }
                    else {
-                       echo "Welcome, OPA Exec Member!";
+                       echo "Exec Board Home</h1><p>Welcome to our new voting web site. "
+                       . "Here, you can vote on any elections being held, as well as add "
+                               . "and remove candidates, clear all votes. and open and "
+                               . "close elections.";
                    }
-               
             ?>
-        </h2>
-        <div class="body" style="width: 900px;">
-            <h3>Important Dates</h3>
-            <ul>
-                <li style="padding: 1em;">Constitutional Revisions
-                    <ul>
-                        <li>Feb 17 - Discussion Day 1</li>
-                        <li>Feb 24 - Discussion Day 2</li>
-                        <li>March 3 - Voting</li>
-                    </ul>
-                </li>
-                <li style="padding: 1em;">March 24 - Exec Board Elections</li>
-                <li style="padding: 1em;">April 17 - Rose Night</li>
-            </ul>
+        </div>
+        <div class="container-fluid"
+             <div class="row">
+                 <div class="col-sm-4">
+                     <h3>Constitutional Revisions</h3>
+                     <p>All active sisters are required to attend at least one of the two
+                     discussion days (February 17th & 24th) and the voting day (March 3rd).
+                     <br> </p>
+                     <p><a class="btn btn-primary btn-lg" href="constitutional_revisions.php" role="button">Go ></a></p>
+                 </div> 
+                <div class="col-sm-4">
+                    <h3>Dissociation Voting</h3>
+                    <p>There is no dissociation voting this semester!
+                     <br> </p>
+                    <p><a class="btn btn-primary btn-lg" href="dissociation_voting.php" role="button">Go ></a></p>
+                </div>
+                 <div class="col-sm-4">
+                     <h3>Elections</h3>
+                     <p>Elections will be held on Tuesday March 24th. The elections slate opens
+                         three weeks prior to elections (March 3rd) and closes one week prior (March 17th).
+                     <br> </p>
+                     <p><a class="btn btn-primary btn-lg" href="elections.php" role="button">Go ></a></p>
+                 </div>
+            </div>
+        </div>
+        <div class="container-fluid"
+        <div class="row">
+                 <div class="col-sm-4">
+                     <h3>Sister of the Month</h3>
+                     <p>Sister of the month is voted on at the first chapter of each month.
+                         The sister of the month is someone who has gone above and beyond 
+                         during the previous month.
+                     <br> </p>
+                     <p><a class="btn btn-primary btn-lg" href="sister_of_the_month.php" role="button">Go ></a></p>
+                 </div> 
+                <div class="col-sm-4">
+                    <h3>Other Votes</h3>
+                    <p>If you don't see what you're looking for above, look here.
+                     <br> </p>
+                    <p><a class="btn btn-primary btn-lg" href="other_votes.php" role="button">Go ></a></p>
+                </div>
+                 <div class="col-sm-4">
+                     <h3>Log out</h3>
+                     <p><a class="btn btn-primary btn-lg" href="index.php" role="button">Bye</a></p>
+                 </div>
+            </div>
         </div>
     </body>
 </html>
