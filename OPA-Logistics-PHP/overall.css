@@ -9,20 +9,26 @@ and open the template in the editor.
 */
 
 body {
-    background-color: lightblue;
-    fornt-family: headingFont;
-    font-size: 1em;
+    background-image: url("linedpaper.png");
+    background-repeat: repeat;
+    
+//    font-family: headingFont;
+//    font-size: 1em;
+}
+.body-cr {
+    background: #ffef99;
+    padding: 2em;
 }
 h1 {
-    color: darkblue;
-    margin-left: 460px;;
+    color: black;
+    margin-left: 0;
     font-family: headingFont;
     font-size: 96px;
     padding: 0em;
     
 }
 h2 {
-    color: darkblue;
+    color: black;
     margin-left: 200px;
     font-family: headingFont;
     font-size: 96px;
@@ -36,15 +42,15 @@ h2 {
 @font-face {
     font-family: bodyFont;
     src: url(Vera.ttf);
+    font-size: 32px;
 }
 
 .loginBox {
-    background-color: #ffef99;
-    border-style: groove;
-    border-color: #FFD700;
-    border-width: 5px;
-    margin-left: 43%;
-    margin-right: 42%;
+    background-color: skyblue;
+//    border-style: groove;
+//    border-color: white;
+//    border-width: 5px;
+    display: inline-block;
     color: darkblue;
     padding: 20px;
     font-family: bodyFont;

@@ -33,6 +33,8 @@ and open the template in the editor.
                 Which ammendment are you voting for?<br>
             <form name="getRevision" method="post" action="getRevision.php">
                     <?php
+                    
+                    session_start();
 
                     $host="localhost";
                     $user="talltech_mt"; 
@@ -71,6 +73,46 @@ and open the template in the editor.
                 <input type="submit" value="Go">
             </form>
             </p>
+            <?php
+                if ($_SESSION['user'] == 'exec') {
+                    echo '<h3>Exec Options</h3>';
+                    echo '<p>';
+                    echo 'Which ammendment do you want to view?<br>';
+                    echo '<form name="getRevision" method="post" action="getRevisionResults.php">';
+
+                        if (!$conn = new mysqli($host, $user, $pass, $db_name)){
+                            echo 'ERROR - Could Not connect to database';
+                        }
+
+                        $sql = "SELECT *  FROM ConstitutionalAmmendment";
+                        if (!$result = $conn->query($sql)) {
+                            echo 'ERROR - '.$conn->error;
+                        } else  if ($result->num_rows > 0){
+                            echo '<select name="amndResult">';
+                            $result->data_seek(0);
+                            echo 'result obtained<br>';
+                            while($row = $result->fetch_assoc()){
+                                //$ammendment = $row['id'];
+                                //$page = $row['pageName'];
+                                echo '<option value="' , $row['id'] , '">' , $row['id'] , '</option><br>';
+                                //echo $ammendment , "    " , $page;
+                                //echo '<br>ln<br>';
+                            }
+                            echo 'done looping through results';
+                            echo '</select>';
+                            //$resultUC->close();Why does this mess everything up?
+                        }
+                        else {
+                            echo 'No Ammendments';
+                        }
+                    echo '</select>';
+                    echo '<br>';
+                    echo '<br>';
+                    echo '<input type="submit" value="Go">';
+                    echo '</form>';
+                    echo '</p>';
+                }
+            ?>
         </div>
     </body>
 </html>
