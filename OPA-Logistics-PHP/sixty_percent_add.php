@@ -6,38 +6,38 @@ and open the template in the editor.
 -->
 <html>
     <head>
-        <?php include('checklogin.php');?>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+        <!-- Latest compiled JavaScript -->
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+        <title>OPA Votes</title>
         <link rel="stylesheet" type="text/css" href="overall.css">
-        <title>Other Votes</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="utf-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
     <body>
-        <div class =" menu">
-            <a href="home.php"><img src="yellowrose.png" alt="Yellow Rose" 
-             style="width:150px;height:150px;margin-left: 15px;
-             margin-top: 0px;"></a>
-        <br><br>
-        <a href="constitutional_revisions.php"><div class="menuItem">Constitutional Revisions</div></a> <br>
-        <a href="dissociation_voting.php"><div class="menuItem">Dissociation Voting</div></a> <br>
-        <a href="elections.php"><div class="menuItem">Elections</div></a> <br>
-        <a href="vote_in.php"><div class="menuItem">Vote In</div></a> <br>
-        <a href="other_votes.php"><div class="menuItem">Other Votes</div></a><br>
-        <a href="index.php"><div class="menuItem">Log out</div></a>
+        <div class="jumbotron" style="background-color: lightskyblue">
+            <h1>Add a Sixty Percent Project</h1>
         </div>
-        <h2 style="position:absolute;margin-left: 225px;margin-top: 25px;">
-            Add a Sixty Percent Project
-        </h2>
-        <div class="body" style="width: 900px;">
+        <div class="container" style="background-color: white">
+             <ol class="breadcrumb">
+                <li><a href="home.php">Home</a></li>
+                <li><a href="sixty_percent.php">Sixty Percent Projects</a></li>
+                <li class="active">Add Sixty Percent Project</li>
+            </ol>
             
             <form name="vote_sp" method="post" action="sixty_percent_add.php">
-                <h3>Name of Projet:</h3>
+                <h3>Name of Project:</h3>
                 <input type ="text" name="Name" id ="name">
                 <h3>Area of Service:</h3>
                 <input type ="text" name="AreaOfService" id ="aos">
                 <br>
                 <br>
-                <input type="submit" name="Submit" value="Vote">
+                <input type="submit" name="Submit" value="Submit">
             </form>
             <?php
 
@@ -59,8 +59,8 @@ and open the template in the editor.
                 $add = "INSERT INTO SixtyPercentCandidates VALUES ('".$name."', '".$aos."', 'spring2015')";
 
                 if(!$added= $conn->query($add)){
-                    echo 'ERROR'.$conn->error."<br>";
-                    echo $add;
+                    //echo 'ERROR'.$conn->error."<br>";
+                    //echo $add;
                     $err = TRUE;
                 }
                 

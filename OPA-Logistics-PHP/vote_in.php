@@ -6,29 +6,30 @@ and open the template in the editor.
 -->
 <html>
     <head>
+       <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+        <!-- Latest compiled JavaScript -->
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+        <title>OPA Votes</title>
         <link rel="stylesheet" type="text/css" href="overall.css">
-        <title>Vote In</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="utf-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
     <body>
-        <div class =" menu">
-            <a href="home.php"><img src="yellowrose.png" alt="Yellow Rose" 
-             style="width:150px;height:150px;margin-left: 15px;
-             margin-top: 0px;"></a>
-        <br><br>
-        <a href="constitutional_revisions.php"><div class="menuItem">Constitutional Revisions</div></a> <br>
-        <a href="dissociation_voting.php"><div class="menuItem">Dissociation Voting</div></a> <br>
-        <a href="elections.php"><div class="menuItem">Elections</div></a> <br>
-        <a href="vote_in.php"><div class="menuItem">Vote In</div></a> <br>
-        <a href="other_votes.php"><div class="menuItem">Other Votes</div></a><br>
-        <a href="index.php"><div class="menuItem">Log out</div></a>
+        <div class="jumbotron" style="background-color: lightskyblue">
+            <h1>Vote In</h1>
         </div>
-        <h2 style="position:absolute;margin-left: 225px;margin-top: 25px;">
-            Vote In
-        </h2>
-        <div class="body" style="width: 900px;">
-            TODO: Put content here
+        <div class="container" style="background-color: white">
+             <ol class="breadcrumb">
+                <li><a href="home.php">Home</a></li>
+                <li><a href="other_votes.php">Other Votes</a></li>
+                <li class="active">Vote In</li>
+            </ol>
+            <p>There is no vote in this semester</p>
         </div>
     </body>
 </html>

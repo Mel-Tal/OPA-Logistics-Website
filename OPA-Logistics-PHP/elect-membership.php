@@ -6,6 +6,7 @@ and open the template in the editor.
 -->
 <html>
     <head>
+        <?php include('checklogin.php');?>
         <!-- Latest compiled and minified CSS -->
         <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 
@@ -21,17 +22,35 @@ and open the template in the editor.
     </head>
     <body>
         <div class="jumbotron" style="background-color: lightskyblue">
-            <h1>Other Votes</h1>
+            <h1>Membership Director</h1>
         </div>
         <div class="container" style="background-color: white">
              <ol class="breadcrumb">
                 <li><a href="home.php">Home</a></li>
-                <li class="active">Other Votes</li>
+                <li><a href="elections.php">Elections</a>
+                <li class="active">Membership Director</li>
             </ol>
-            <ul>
-                <li><a href="sixty_percent.php">Sixty Percent Projects</a><br></li>
-                <li><a href="vote_in.php">Vote In</a><br></li>
-            </ul>
+            
+            <div class="row">
+                <div class="col-sm-9">
+                    <h3>Vote</h3>
+
+                    <form name="vote_mem" method="post" action="vote_mem.php">
+                        Type the number of the candidate you wish to vote for, if you wish to abstain, 
+                        put 0.<br>
+                        <input type="password" name="vote">
+                        <br>
+                        <br>
+                        <input type="submit" name="Submit" value="Vote">
+                    </form>
+                </div>
+                <div class="col-sm-3">
+                    <h3>Candidates</h3>
+                    <ol>
+                        <li>Neha Sinha</li>
+                    </ol>
+                </div>
+            </div>
         </div>
     </body>
 </html>

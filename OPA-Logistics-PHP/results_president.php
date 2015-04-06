@@ -6,7 +6,8 @@ and open the template in the editor.
 -->
 <html>
     <head>
-         <!-- Latest compiled and minified CSS -->
+        <?php include('checklogin.php');?>
+        <!-- Latest compiled and minified CSS -->
         <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 
         <!-- jQuery library -->
@@ -21,17 +22,20 @@ and open the template in the editor.
     </head>
     <body>
         <div class="jumbotron" style="background-color: lightskyblue">
-            <h1>Sister of the Month</h1>
+            <h1>President</h1>
         </div>
         <div class="container" style="background-color: white">
              <ol class="breadcrumb">
                 <li><a href="home.php">Home</a></li>
-                <li><a href="sister_of_the_month.php">Sister of the Month</a>
-                <li class="active">Sister of the Month Results</li>
+                <li><a href="elections.php">Elections</a>
+                <li class="active">President Results</li>
             </ol>
             
-            
-                <?php
+           <div class="row">
+                <div class="col-sm-9">
+                    <h3>Results</h3>
+
+                    <?php
 
                     $host="localhost";
                     $user="talltech_mt"; 
@@ -42,23 +46,18 @@ and open the template in the editor.
                         echo 'ERROR - Could Not connect to database';
                     }
 
-                    echo "<h3>Results</h3>";
-                    $sql = "SELECT Name, Count(Name) FROM `SOMVotes`GROUP BY Name";
+                    $sql = "SELECT vote, Count(vote) FROM `ElectionsVotes` WHERE position = 'president' GROUP BY vote";
                     if (!$result = $conn->query($sql)) {
                         echo 'ERROR - '.$conn->error;
                     } else {
                         $result->data_seek(0);
                         while($row = $result->fetch_assoc()){
-                            echo $row['Name'].'&nbsp;&nbsp;&nbsp;&nbsp;'.$row['Count(Name)'].'<br>';
+                            echo $row['vote'].'&nbsp;&nbsp;&nbsp;&nbsp;'.$row['Count(vote)'].'<br>';
                         }
                         $resultUC->close();
                     }
-
-                ?>
-               
-            
-        </div>
+                    ?>
+                </div>
+            </div>
     </body>
 </html>
-
-

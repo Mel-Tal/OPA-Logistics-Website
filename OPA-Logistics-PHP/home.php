@@ -40,50 +40,51 @@ and open the template in the editor.
                    }
             ?>
         </div>
-        <div class="container-fluid"
-             <div class="row">
-                 <div class="col-sm-4">
-                     <h3>Constitutional Revisions</h3>
-                     <p>All active sisters are required to attend at least one of the two
-                     discussion days (February 17th & 24th) and the voting day (March 3rd).
-                     <br> </p>
-                     <p><a class="btn btn-primary btn-lg" href="constitutional_revisions.php" role="button">Go ></a></p>
-                 </div> 
-                <div class="col-sm-4">
-                    <h3>Dissociation Voting</h3>
-                    <p>There is no dissociation voting this semester!
-                     <br> </p>
-                    <p><a class="btn btn-primary btn-lg" href="dissociation_voting.php" role="button">Go ></a></p>
+        <div class="container" style="background-color: white">
+            <div class="container-fluid"
+                 <div class="row">
+                     <div class="col-sm-4">
+                         <h3>Constitutional Revisions</h3>
+                         <p>All active sisters are required to attend at least one of the two
+                         discussion days (February 17th & 24th) and the voting day (March 3rd).
+                         <br> </p>
+                         <p><a class="btn btn-primary btn-lg" href="constitutional_revisions.php" role="button">Go ></a></p>
+                     </div> 
+                    <div class="col-sm-4">
+                        <h3>Dissociation Voting</h3>
+                        <p>There is no dissociation voting this semester!
+                         <br> </p>
+                        <p><a class="btn btn-primary btn-lg" href="dissociation_voting.php" role="button">Go ></a></p>
+                    </div>
+                     <div class="col-sm-4">
+                         <h3>Elections</h3>
+                         <p>Elections will be held on Tuesday March 24th. The elections slate opens
+                             three weeks prior to elections (March 3rd) and closes one week prior (March 17th).
+                         <br> </p>
+                         <p><a class="btn btn-primary btn-lg" href="elections.php" role="button">Go ></a></p>
+                     </div>
                 </div>
-                 <div class="col-sm-4">
-                     <h3>Elections</h3>
-                     <p>Elections will be held on Tuesday March 24th. The elections slate opens
-                         three weeks prior to elections (March 3rd) and closes one week prior (March 17th).
-                     <br> </p>
-                     <p><a class="btn btn-primary btn-lg" href="elections.php" role="button">Go ></a></p>
-                 </div>
-            </div>
-        </div>
-        <div class="container-fluid"
-        <div class="row">
-                 <div class="col-sm-4">
-                     <h3>Sister of the Month</h3>
-                     <p>Sister of the month is voted on at the first chapter of each month.
-                         The sister of the month is someone who has gone above and beyond 
-                         during the previous month.
-                     <br> </p>
-                     <p><a class="btn btn-primary btn-lg" href="sister_of_the_month.php" role="button">Go ></a></p>
-                 </div> 
-                <div class="col-sm-4">
-                    <h3>Other Votes</h3>
-                    <p>If you don't see what you're looking for above, look here.
-                     <br> </p>
-                    <p><a class="btn btn-primary btn-lg" href="other_votes.php" role="button">Go ></a></p>
+            <div class="container-fluid"
+                <div class="row">
+                     <div class="col-sm-4">
+                         <h3>Sister of the Month</h3>
+                         <p>Sister of the month is voted on at the first chapter of each month.
+                             The sister of the month is someone who has gone above and beyond 
+                             during the previous month.
+                         <br> </p>
+                         <p><a class="btn btn-primary btn-lg" href="sister_of_the_month.php" role="button">Go ></a></p>
+                     </div> 
+                    <div class="col-sm-4">
+                        <h3>Other Votes</h3>
+                        <p>If you don't see what you're looking for above, look here.
+                         <br> </p>
+                        <p><a class="btn btn-primary btn-lg" href="other_votes.php" role="button">Go ></a></p>
+                    </div>
+                     <div class="col-sm-4">
+                         <h3>Log out</h3>
+                         <p><a class="btn btn-primary btn-lg" href="index.php" role="button">Bye</a></p>
+                     </div>
                 </div>
-                 <div class="col-sm-4">
-                     <h3>Log out</h3>
-                     <p><a class="btn btn-primary btn-lg" href="index.php" role="button">Bye</a></p>
-                 </div>
             </div>
         </div>
     </body>
