@@ -6,26 +6,20 @@ $pass="julia1996";
 $db_name="talltech_ophiavotes";
 $err = FALSE;
 
-session_start();
-
 if (!$conn = new mysqli($host, $user, $pass, $db_name)){
     echo 'ERROR - Could Not connect to database';
     $err = TRUE;
 } 
- 
-$name = $_POST['name'];
 
-$vote="INSERT INTO SOMVotes (Name) VALUES ('".$name."')";
-if(!$submitted= $conn->query($vote)){
+$sql="DELETE FROM SelectiveRush";
+if(!$submitted= $conn->query($sql)){
     echo 'ERROR - '.$conn->error."<br>";
     $err = TRUE;
 }
 
 if (!$err) {
-   $_SESSION['success'] = 1;
-   header("location:sister_of_the_month.php"); 
+   header("location:home.php"); 
 }
 
 ob_end_flush();
 ?>
-

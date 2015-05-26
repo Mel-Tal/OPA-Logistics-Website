@@ -15,7 +15,7 @@ if (!$conn = new mysqli($host, $user, $pass, $db_name)){
  
 $name = $_POST['name'];
 
-$vote="INSERT INTO SOMVotes (Name) VALUES ('".$name."')";
+$vote="INSERT INTO OphiasPalVotes (Name) VALUES ('".$name."')";
 if(!$submitted= $conn->query($vote)){
     echo 'ERROR - '.$conn->error."<br>";
     $err = TRUE;
@@ -23,7 +23,7 @@ if(!$submitted= $conn->query($vote)){
 
 if (!$err) {
    $_SESSION['success'] = 1;
-   header("location:sister_of_the_month.php"); 
+   header("location:home.php"); 
 }
 
 ob_end_flush();

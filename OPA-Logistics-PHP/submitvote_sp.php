@@ -6,6 +6,8 @@ $pass="julia1996";
 $db_name="talltech_ophiavotes";
 $err = FALSE;
 
+session_start();
+
 if (!$conn = new mysqli($host, $user, $pass, $db_name)){
     echo 'ERROR - Could Not connect to database';
     $err = TRUE;
@@ -70,6 +72,7 @@ if(!$submittedPP= $conn->query($votePP)){
 echo $pp."<br>";
 
 if (!$err) {
+   $_SESSION['success'] = 1;
    header("location:home.php"); 
 }
 

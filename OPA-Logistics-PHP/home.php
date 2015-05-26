@@ -20,7 +20,19 @@ and open the template in the editor.
         <meta charset="utf-8"> 
         <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
-    <body> 
+    <body>
+        <?php
+            if ($_SESSION['success'] == 1) {
+                echo '<div class="alert alert-success alert-dismissable">'
+                    . '<button type="button" class="close" data-dismiss="alert"'
+                            . 'aria-hidden="true">'
+                            . '&times;'
+                        . '</button>'
+                        . 'Vote Submitted Sucessfully'
+                    . '</div>';
+                   $_SESSION['success'] = 0;
+            }
+        ?>
         <div class="jumbotron" style="background-color: lightskyblue">
             <h1>
             <?php
